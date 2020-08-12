@@ -2,22 +2,12 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/music_app_common"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="wrap_content"
     tools:context=".ui.main.MainActivity">
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/list_track"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/hight_0dp"
-        app:layout_constraintBottom_toTopOf="@+id/progress_time_music"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <ProgressBar
-        android:id="@+id/progress_time_music"
+        android:id="@+id/seek_bar_time_music"
         style="?android:attr/progressBarStyleHorizontal"
         android:layout_width="match_parent"
         android:layout_height="@dimen/hight_1dp"
@@ -47,25 +37,18 @@
         android:orientation="vertical"
         app:layout_constraintGuide_begin="@dimen/width_64dp" />
 
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/guide_line_horizontal_right"
-        android:layout_width="@dimen/width_0dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintGuide_end="@dimen/width_120dp" />
-
     <ImageView
-        android:id="@+id/img_play_track"
+        android:id="@+id/img_track"
         android:layout_width="@dimen/size_48dp"
         android:layout_height="@dimen/size_48dp"
-        android:src="@drawable/music"
+        android:src="@drawable/img_no_image"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/guide_line_horizontal_left"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/guide_line_vertical" />
 
     <TextView
-        android:id="@+id/txt_title"
+        android:id="@+id/txt_title_track"
         style="@style/TrackTitle"
         android:layout_width="@dimen/width_0dp"
         android:layout_height="wrap_content"
@@ -78,7 +61,7 @@
         app:layout_constraintVertical_bias="0.8" />
 
     <TextView
-        android:id="@+id/txt_artist"
+        android:id="@+id/txt_artist_track"
         style="@style/TrackArtist"
         android:layout_width="@dimen/width_0dp"
         android:layout_height="wrap_content"
@@ -90,39 +73,5 @@
         app:layout_constraintTop_toTopOf="@+id/guide_line_vertical_end"
         app:layout_constraintVertical_bias="0.2" />
 
-    <ImageButton
-        android:id="@+id/btn_play"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:src="@drawable/ic_play"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_horizontal_right"
-        app:layout_constraintTop_toTopOf="@+id/guide_line_vertical"
-        app:layout_constraintVertical_bias="0.5" />
-
-    <ImageButton
-        android:id="@+id/btn_pre"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_play"
-        app:layout_constraintStart_toStartOf="@+id/guide_line_horizontal_right"
-        app:layout_constraintTop_toTopOf="@+id/guide_line_vertical"
-        app:layout_constraintVertical_bias="0.5"
-        app:srcCompat="@drawable/ic_skip_previous" />
-
-    <ImageButton
-        android:id="@+id/btn_next"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btn_play"
-        app:layout_constraintTop_toTopOf="@+id/guide_line_vertical"
-        app:srcCompat="@drawable/ic_skip_next" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
+
