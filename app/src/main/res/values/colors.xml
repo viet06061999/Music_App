@@ -3,4 +3,6 @@
     <color name="colorPrimary">#6200EE</color>
     <color name="colorPrimaryDark">#3700B3</color>
     <color name="colorAccent">#03DAC5</color>
+    <color name="color_white_transparent">#D9ffffff</color>
+    <color name="color_daisy_bush">#4527A0</color>
 </resources>
